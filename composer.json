@@ -1,6 +1,6 @@
 {
     "name": "peterbrain/magento2-termsconditions",
-    "description": "shows all general terms and conditions of the respective store view",
+    "description": "shows all terms and conditions of the respective store view on a page",
     "type": "magento2-module",
     "version": "0.0.1",
     "license": [

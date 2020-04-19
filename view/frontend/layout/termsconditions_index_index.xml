@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<!--<referenceContainer name="content">
+			<block class="PeterBrain\TermsConditions\Block\Index\Index" name="index.index" template="PeterBrain_TermsConditions::index/index.phtml"/>
+		</referenceContainer>-->
+		<referenceContainer name="content">
+      <block class="Magento\CheckoutAgreements\Block\Agreements" name="terms_condition" template="PeterBrain_TermsConditions::termsconditions.phtml" />
+    </referenceContainer>
+	</body>
+</page>

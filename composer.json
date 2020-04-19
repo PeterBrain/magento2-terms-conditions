@@ -1,0 +1,29 @@
+{
+    "name": "peterbrain/module-termsconditions",
+    "description": "shows all general terms and conditions of the respective store view",
+    "type": "magento2-module",
+    "version": "0.0.1",
+    "license": "",
+    "authors": [
+        {
+            "name": "Peter Loecker",
+            "email": "peter.loecker@live.at"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/PeterBrain/magento2-termsconditions"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "PeterBrain\\TermsConditions\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

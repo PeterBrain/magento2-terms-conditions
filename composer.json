@@ -1,5 +1,5 @@
 {
-    "name": "peterbrain/module-termsconditions",
+    "name": "peterbrain/magento2-termsconditions",
     "description": "shows all general terms and conditions of the respective store view",
     "type": "magento2-module",
     "version": "0.0.1",
@@ -8,12 +8,6 @@
         {
             "name": "Peter Loecker",
             "email": "peter.loecker@live.at"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/PeterBrain/magento2-termsconditions"
         }
     ],
     "minimum-stability": "dev",

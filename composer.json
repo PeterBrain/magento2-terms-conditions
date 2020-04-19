@@ -3,7 +3,9 @@
     "description": "shows all general terms and conditions of the respective store view",
     "type": "magento2-module",
     "version": "0.0.1",
-    "license": "",
+    "license": [
+        "OSL-3.0"
+    ],
     "authors": [
         {
             "name": "Peter Loecker",

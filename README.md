@@ -34,7 +34,7 @@ php bin/magento cache:flush
 ## Usage
 
 - From Magento 2 admin panel, navigate to `Stores > Configuration > Sales > Checkout` and set `Enable Terms and Conditions` to `Yes`
-- If not done already, add a new condition at `Stores -> Terms and Conditions`
+- If not done already, add a new condition at `Stores > Terms and Conditions`
   - Every condition meeting the scope of your current store view will be displayed at `https://www.example.com/termsconditions/`.
 
 ## Credits

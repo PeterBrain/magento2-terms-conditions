@@ -4,7 +4,8 @@
     "type": "magento2-module",
     "version": "0.0.1",
     "license": [
-        "OSL-3.0"
+        "OSL-3.0",
+        "AFL-3.0"
     ],
     "authors": [
         {
@@ -13,7 +14,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": "~7.0.0",
+        "magento/framework": "~100.0.4"
+    },
     "autoload": {
         "psr-4": {
             "PeterBrain\\TermsConditions\\": ""

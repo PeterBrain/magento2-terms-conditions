@@ -3,19 +3,25 @@
  * @var $block \Magento\CheckoutAgreements\Block\Agreements
  */
 ?>
-<?php
-if (!$block->getAgreements()) {
-  return;
-}
-?>
-<ol class="agreements items">
-  <?php foreach ($block->getAgreements() as $agreement): ?>
-    <li class="item">
-      <?php if ($agreement->getIsHtml()): ?>
-        <?php /* @escapeNotVerified */ echo $agreement->getContent(); ?>
-      <?php else: ?>
-        <?php echo nl2br($block->escapeHtml($agreement->getContent())); ?>
-      <?php endif; ?>
-    </li>
-  <?php endforeach; ?>
-</ol>
+<?php $helper = $this->helper('PeterBrain\TermsConditions\Helper\Data'); ?>
+
+<?php if ($helper->isEnabled()): ?>
+
+  <?php
+  if (!$block->getAgreements()) {
+    return;
+  }
+  ?>
+  <ol class="agreements items">
+    <?php foreach ($block->getAgreements() as $agreement): ?>
+      <li class="item">
+        <?php if ($agreement->getIsHtml()): ?>
+          <?php /* @escapeNotVerified */ echo $agreement->getContent(); ?>
+        <?php else: ?>
+          <?php echo nl2br($block->escapeHtml($agreement->getContent())); ?>
+        <?php endif; ?>
+      </li>
+    <?php endforeach; ?>
+  </ol>
+
+<?php endif; ?>

@@ -14,7 +14,7 @@
                 <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable Module</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>Select Yes to enable modal output.</comment>
+                    <comment>Select Yes to enable module output.</comment>
                 </field>
             </group>
         </section>

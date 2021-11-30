@@ -8,7 +8,7 @@ use Magento\Store\Model\ScopeInterface;
 class Data extends AbstractHelper
 {
 
-  const CONFIG_MODULE_PATH = 'termsconditions';
+  const CONFIG_MODULE_PATH = 'pb_termsconditions';
 
 	public function getConfigValue($field, $storeId = null)
 	{

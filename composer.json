@@ -15,7 +15,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "peterbrain/magento2-peterbrain-core": "^0.0.1"
+        "peterbrain/magento2-peterbrain-core": "^0.0"
     },
     "autoload": {
         "psr-4": {

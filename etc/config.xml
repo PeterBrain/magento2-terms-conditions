@@ -4,6 +4,7 @@
         <pb_termsconditions>
             <general>
                 <enable>0</enable>
+                <route>termsconditions</route>
             </general>
         </pb_termsconditions>
     </default>

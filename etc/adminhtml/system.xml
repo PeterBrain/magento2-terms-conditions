@@ -16,6 +16,10 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes to enable module output.</comment>
                 </field>
+                <field id="route" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom URL</label>
+                    <comment>Configure a custom URL. Note that this will not work if the URL already exists.</comment>
+                </field>
             </group>
         </section>
     </system>

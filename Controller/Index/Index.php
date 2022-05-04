@@ -1,13 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace PeterBrain\TermsConditions\Controller\Index;
-
 
 class Index extends \Magento\Framework\App\Action\Action
 {
-
+    /**
+     * @var PageFactory
+     */
     protected $resultPageFactory;
 
     /**
@@ -31,7 +30,8 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-        return $this->resultPageFactory->create();
+        $this->resultPage = $this->resultPageFactory->create();
+		$this->resultPage->getConfig()->getTitle()->set(__('Terms &amp; Conditions'));
+        return $this->resultPage;
     }
 }
-

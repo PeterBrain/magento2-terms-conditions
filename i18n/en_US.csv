@@ -2,3 +2,7 @@
 
 "Enable Module","Enable Module"
 "Select Yes to enable module output.","Select Yes to enable module output."
+"Select ""Yes"" to enable and ""No"" to disable module output.","Select ""Yes"" to enable and ""No"" to disable module output."
+"Custom URL","Custom URL"
+"Configure a custom URL. Note that this will not work if the URL already exists.","Configure a custom URL. Note that this will not work if the URL already exists."
+"Avoid special characters and spaces","Avoid special characters and spaces"

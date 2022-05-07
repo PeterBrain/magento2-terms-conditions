@@ -2,3 +2,7 @@
 
 "Enable Module","Aktiviere Modul"
 "Select Yes to enable module output.","Wähle Ja, um das Modul zu aktivieren."
+"Select ""Yes"" to enable and ""No"" to disable module output.","Wähle ""Ja"", um das Modal zu aktivieren und ""Nein"", um es zu deaktivieren."
+"Custom URL","Benutzerdefinierte URL"
+"Configure a custom URL. Note that this will not work if the URL already exists.","Konfigurieren einer benutzerdefinierten URL. Beachten Sie, dass dies nicht funktioniert, wenn die URL bereits existiert."
+"Avoid special characters and spaces","Vermeiden Sie Sonderzeichen und Leerzeichen"

@@ -11,14 +11,32 @@
             <resource>PeterBrain_TermsConditions::config</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Configuration</label>
-                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="enable" translate="label comment tooltip" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable Module</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Select Yes to enable module output.</comment>
+                    <tooltip>Select "Yes" to enable and "No" to disable module output.</tooltip>
                 </field>
-                <field id="route" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="route" translate="label comment tooltip" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Custom URL</label>
                     <comment>Configure a custom URL. Note that this will not work if the URL already exists.</comment>
+                    <tooltip>Avoid special characters and spaces</tooltip>
+                    <validate>required-entry no-whitespace alphanumeric</validate>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="information" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Information</label>
+                <attribute type="expanded">0</attribute>
+                <field id="module_name" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Name</label>
+                    <frontend_model>PeterBrain\TermsConditions\Block\Adminhtml\System\Config\Module\Name</frontend_model>
+                </field>
+                <field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Version</label>
+                    <frontend_model>PeterBrain\TermsConditions\Block\Adminhtml\System\Config\Module\Version</frontend_model>
                 </field>
             </group>
         </section>

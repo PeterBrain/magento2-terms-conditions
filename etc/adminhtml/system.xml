@@ -19,24 +19,69 @@
                 </field>
                 <field id="route" translate="label comment tooltip" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Custom URL</label>
-                    <comment>Configure a custom URL. Note that this will not work if the URL already exists.</comment>
-                    <tooltip>Avoid special characters and spaces</tooltip>
+                    <comment>Configure a custom URL. Note that this will not work if the URL already exists. Default: termsconditions</comment>
+                    <tooltip>Avoid special characters and spaces.</tooltip>
                     <validate>required-entry no-whitespace alphanumeric</validate>
                     <depends>
                         <field id="enable">1</field>
                     </depends>
                 </field>
+                <field id="page_title" translate="label comment tooltip" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Page Title</label>
+                    <comment>Configure a custom page title. Default: Terms &amp; Conditions</comment>
+                    <tooltip>On web browsers, the website title appears at the top of the tab or window, and in search results website titles display as bold hyperlinked texts.</tooltip>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="sitemap" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Sitemap</label>
+                <field id="add_to_sitemap" translate="label comment tooltip" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add to Sitemap</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Select Yes to add terms and conditions to sitemap.</comment>
+                    <tooltip>Select "Yes" to add and "No" to prevent URL from being added to the sitemap.</tooltip>
+                </field>
+                <field id="priority" translate="label comment tooltip" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Priority</label>
+                    <comment>Priority assigns a level of importance to a sitemap entry. Default: 0.5</comment>
+                    <tooltip>Listed numerically, sitemap priority values, or levels, go from 1.0 down to 0.0. The most important, prominent and high-quality pages will be labeled with a 1.0.</tooltip>
+                    <validate>required-entry no-whitespace</validate>
+                    <depends>
+                        <field id="add_to_sitemap">1</field>
+                    </depends>
+                </field>
+                <field id="change_frequency" translate="label comment tooltip" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Change Frequency</label>
+                    <source_model>Magento\Sitemap\Model\Config\Source\Frequency</source_model>
+                    <comment>Set a custom change frequency for this URL in the sitemap.</comment>
+                    <tooltip>Change frequency indicates how often the terms and conditions page is updated.</tooltip>
+                    <depends>
+                        <field id="add_to_sitemap">1</field>
+                    </depends>
+                </field>
+                <depends>
+                    <field id="pb_termsconditions/general/enable">1</field>
+                </depends>
             </group>
             <group id="information" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Information</label>
                 <attribute type="expanded">0</attribute>
-                <field id="module_name" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="module_name" translate="label" type="note" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Module Name</label>
-                    <frontend_model>PeterBrain\TermsConditions\Block\Adminhtml\System\Config\Module\Name</frontend_model>
+                    <frontend_model>PeterBrain\Core\Block\Adminhtml\System\Config\Module\Name</frontend_model>
+                    <attribute type="module_name">PeterBrain_TermsConditions</attribute>
                 </field>
-                <field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="module_version" translate="label" type="note" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Module Version</label>
-                    <frontend_model>PeterBrain\TermsConditions\Block\Adminhtml\System\Config\Module\Version</frontend_model>
+                    <frontend_model>PeterBrain\Core\Block\Adminhtml\System\Config\Module\Version</frontend_model>
+                    <attribute type="module_name">PeterBrain_TermsConditions</attribute>
+                </field>
+                <field id="setup_version" translate="label" type="note" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Setup Version</label>
+                    <frontend_model>PeterBrain\Core\Block\Adminhtml\System\Config\Module\SetupVersion</frontend_model>
+                    <attribute type="module_name">PeterBrain_TermsConditions</attribute>
                 </field>
             </group>
         </section>

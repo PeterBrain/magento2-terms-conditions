@@ -3,17 +3,24 @@
  * @var $block \Magento\CheckoutAgreements\Block\Agreements
  */
 ?>
-<?php $helper = $this->helper('PeterBrain\TermsConditions\Helper\Data'); ?>
+<?php $helper = $this->helper('PeterBrain\TermsConditions\Helper\TermsConditionsHelper'); ?>
 
 <?php if ($helper->isEnabled()): ?>
 
   <?php
   if (!$block->getAgreements()) {
     return;
+  } else {
+    $agreements = $block->getAgreements();
+
+    if (count($agreements) < 1) {
+      echo __("There are no terms and conditions configured yet.");
+      return;
+    }
   }
   ?>
   <ol class="agreements items">
-    <?php foreach ($block->getAgreements() as $agreement): ?>
+    <?php foreach ($agreements as $agreement): ?>
       <li class="item">
         <?php if ($agreement->getIsHtml()): ?>
           <?php /* @escapeNotVerified */ echo $agreement->getContent(); ?>

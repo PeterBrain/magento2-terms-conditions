@@ -2,7 +2,7 @@
     "name": "peterbrain/magento2-terms-conditions",
     "description": "Display all terms and conditions of the respective store view on a page",
     "type": "magento2-module",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "license": [
         "OSL-3.0"
     ],
@@ -15,7 +15,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "peterbrain/magento2-peterbrain-core": "^0.1"
+        "peterbrain/magento2-peterbrain-core": "^0.2"
     },
     "autoload": {
         "psr-4": {

@@ -13,7 +13,20 @@ Package name: `peterbrain/magento2-terms-conditions`
 
 ## Main Functionalities
 
-Shows all terms and conditions (Magento built-in feature) of the respective store view on a page.
+- Display all terms and conditions (Magento built-in feature) of the respective store view on a page.
+- Add this page to Sitemap.
+- Display specific terms and conditions within a page or block with a widget.
+
+Widget code:
+```html
+{{widget type="PeterBrain\TermsConditions\Block\Widget\Tc" agreement_id="<id>"}}
+```
+or use the Magento integrated GUI for widgets.
+
+Use Widget to display specific terms and conditions.:
+![Use Widget to display specific terms and conditions.](https://github.com/peterbrain/magento2-terms-conditions/blob/media/terms-conditions_widget.jpg?raw=true)
+Admin configuration:
+![Admin configuration](https://github.com/peterbrain/magento2-terms-conditions/blob/media/terms-conditions_admin.jpg?raw=true)
 
 ## Installation
 
@@ -43,6 +56,9 @@ php bin/magento cache:flush
 - In Magento 2 admin, navigate to `Stores > Configuration > Sales > Checkout` and set `Enable Terms and Conditions` to `Yes`
 - If not done already, add a new condition at `Stores > Terms and Conditions`
   - Every condition meeting the scope of your current store view will be displayed at `https://www.example.com/termsconditions/`.
+
+Required system configuration:
+![Required system configuration](https://github.com/peterbrain/magento2-terms-conditions/blob/media/terms-conditions_sysconfig.jpg?raw=true)
 
 ## Credits
 

@@ -1,8 +1,37 @@
 "Terms &amp; Conditions","Terms &amp; Conditions"
 
-"Enable Module","Enable Module"
-"Select Yes to enable module output.","Select Yes to enable module output."
-"Select ""Yes"" to enable and ""No"" to disable module output.","Select ""Yes"" to enable and ""No"" to disable module output."
-"Custom URL","Custom URL"
-"Configure a custom URL. Note that this will not work if the URL already exists.","Configure a custom URL. Note that this will not work if the URL already exists."
-"Avoid special characters and spaces","Avoid special characters and spaces"
+
+"Enable Module","Enable Module", module, PeterBrain_TermsConditions
+"Select Yes to enable module output.","Select Yes to enable module output.", module, PeterBrain_TermsConditions
+"Select ""Yes"" to enable and ""No"" to disable module output.","Select ""Yes"" to enable and ""No"" to disable module output.", module, PeterBrain_TermsConditions
+
+"Custom URL","Custom URL", module, PeterBrain_TermsConditions
+"Configure a custom URL. Note that this will not work if the URL already exists. Default: termsconditions","Configure a custom URL. Note that this will not work if the URL already exists. Default: termsconditions", module, PeterBrain_TermsConditions
+"Avoid special characters and spaces.","Avoid special characters and spaces.", module, PeterBrain_TermsConditions
+
+"Page Title","Page Title", module, PeterBrain_TermsConditions
+"Configure a custom page title. Default: Terms &amp; Conditions","Configure a custom page title. Default: Terms &amp; Conditions", module, PeterBrain_TermsConditions
+"On web browsers, the website title appears at the top of the tab or window, and in search results website titles display as bold hyperlinked texts.","On web browsers, the website title appears at the top of the tab or window, and in search results website titles display as bold hyperlinked texts.", module, PeterBrain_TermsConditions
+
+
+"Sitemap","Sitemap", module, PeterBrain_TermsConditions
+
+"Add to Sitemap","Add to Sitemap", module, PeterBrain_TermsConditions
+"Select Yes to add terms and conditions to sitemap.","Select Yes to add terms and conditions to sitemap.", module, PeterBrain_TermsConditions
+"Select ""Yes"" to add and ""No"" to prevent URL from being added to the sitemap.","Select ""Yes"" to add and ""No"" to prevent URL from being added to the sitemap.", module, PeterBrain_TermsConditions
+
+"Priority","Priority", module, PeterBrain_TermsConditions
+"Priority assigns a level of importance to a sitemap entry. Default: 0.5","Priority assigns a level of importance to a sitemap entry. Default: 0.5", module, PeterBrain_TermsConditions
+"Listed numerically, sitemap priority values, or levels, go from 1.0 down to 0.0. The most important, prominent and high-quality pages will be labeled with a 1.0.","Listed numerically, sitemap priority values, or levels, go from 1.0 down to 0.0. The most important, prominent and high-quality pages will be labeled with a 1.0.", module, PeterBrain_TermsConditions
+
+"Change Frequency","Change Frequency", module, PeterBrain_TermsConditions
+"Set a custom change frequency for this URL in the sitemap.","Set a custom change frequency for this URL in the sitemap.", module, PeterBrain_TermsConditions
+"Change frequency indicates how often the terms and conditions page is updated.","Change frequency indicates how often the terms and conditions page is updated.", module, PeterBrain_TermsConditions
+
+
+"Displays the terms and conditions text for a specific agreement ID.","Displays the terms and conditions text for a specific agreement ID.", module, PeterBrain_TermsConditions
+"Agreement ID","Agreement ID", module, PeterBrain_TermsConditions
+"Sorry, but we are unable find any terms and conditions with this id.","Sorry, but we are unable find any terms and conditions with this id.", module, PeterBrain_TermsConditions
+
+
+"There are no terms and conditions configured yet.","There are no terms and conditions configured yet.", module, PeterBrain_TermsConditions

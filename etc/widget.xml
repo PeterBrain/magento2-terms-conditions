@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="tc" class="PeterBrain\TermsConditions\Block\Widget\Tc">
+        <label translate="true">Terms &amp; Conditions</label>
+        <description translate="true">Displays the terms and conditions text for a specific agreement ID.</description>
+        <parameters>
+            <parameter name="agreement_id" xsi:type="text" required="true" visible="true">
+                <label translate="true">Agreement ID</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

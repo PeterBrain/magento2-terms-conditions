@@ -5,7 +5,13 @@
             <general>
                 <enable>0</enable>
                 <route>termsconditions</route>
+                <page_title>Terms &amp; Conditions</page_title>
             </general>
+            <sitemap>
+                <add_to_sitemap>1</add_to_sitemap>
+                <priority>0.5</priority>
+                <change_frequency>monthly</change_frequency>
+            </sitemap>
         </pb_termsconditions>
     </default>
 </config>

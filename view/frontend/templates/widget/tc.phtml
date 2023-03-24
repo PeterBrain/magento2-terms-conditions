@@ -1,0 +1,15 @@
+<?php
+/**
+ * @var $block \PeterBrain\TermsConditions\Block\Widget\Tc
+ */
+?>
+<?php $helper = $this->helper('PeterBrain\TermsConditions\Helper\TermsConditionsHelper'); ?>
+
+<?php if ($helper->isEnabled()): ?>
+
+  <?php $agreementId = $block->getAgreementId(); ?>
+  <div class="terms-conditions-<?php echo $agreementId; ?>">
+    <?php echo $block->escapeHtml($block->getAgreementById($agreementId)); ?>
+  </div>
+
+<?php endif; ?>

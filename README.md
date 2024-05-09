@@ -23,10 +23,10 @@ Widget code:
 ```
 or use the Magento integrated GUI for widgets.
 
-Use Widget to display specific terms and conditions.:
-![Use Widget to display specific terms and conditions.](https://github.com/peterbrain/magento2-terms-conditions/blob/media/terms-conditions_widget.jpg?raw=true)
+Widget to display specific terms and conditions:
+![Use Widget to display specific terms and conditions.](https://github.com/PeterBrain/magento2-terms-conditions/blob/48eafbb506b34aefd93abbf1b16e809b43fce6f9/terms-conditions_widget.jpg?raw=true)
 Admin configuration:
-![Admin configuration](https://github.com/peterbrain/magento2-terms-conditions/blob/media/terms-conditions_admin.jpg?raw=true)
+![Admin configuration](https://raw.githubusercontent.com/PeterBrain/magento2-terms-conditions/df2e767d254f19d0604fb7fc6c4f9a4c5a997247/terms-conditions_admin.jpg?raw=true)
 
 ## Installation
 
@@ -45,21 +45,23 @@ This extension requires [PeterBrain Core](https://github.com/PeterBrain/magento2
 ### Enable & deploy
 
 ```bash
-php bin/magento module:enable PeterBrain_TermsConditions
-php bin/magento setup:upgrade
-php bin/magento cache:flush
+bin/magento module:enable PeterBrain_TermsConditions
+bin/magento setup:upgrade
+bin/magento setup:static-content:deploy
+bin/magento cache:flush
 ```
 
 ## Usage
 
 - Enable module ouptut in `Stores > Configuration > PeterBrain Extensions > Terms & Conditions > General Configuration`
-- In Magento 2 admin, navigate to `Stores > Configuration > Sales > Checkout` and set `Enable Terms and Conditions` to `Yes`
+- In Magento 2 admin, navigate to `Stores > Configuration > Sales > Checkout` and set `Enable Terms and Conditions` to `Yes`. Module status provides you with a short summary.
 - If not done already, add a new condition at `Stores > Terms and Conditions`
-  - Every condition meeting the scope of your current store view will be displayed at `https://www.example.com/termsconditions/`.
+  - Every condition meeting the scope of your current store view will be displayed at `https://www.example.com/termsconditions/` and your custom url.
+- The url to the terms and conditions is automatically added to the sitemap the next time it is generated. If a user-defined url is specified, only this url will be added to the sitemap.
 
 Required system configuration:
-![Required system configuration](https://github.com/peterbrain/magento2-terms-conditions/blob/media/terms-conditions_sysconfig.jpg?raw=true)
+![Required system configuration](https://github.com/PeterBrain/magento2-terms-conditions/blob/48eafbb506b34aefd93abbf1b16e809b43fce6f9/terms-conditions_sysconfig.jpg?raw=true)
 
 ## Credits
 
-Credits go to [Abdul](https://magento.stackexchange.com/users/31184/abdul) from magento.stackenchange.com for sharing the code. See: <https://magento.stackexchange.com/questions/220500/show-terms-and-conditions-on-static-page>
+Credits go to [Abdul](https://magento.stackexchange.com/users/31184/abdul) from magento.stackenchange.com for the inspiration. See: <https://magento.stackexchange.com/questions/220500/show-terms-and-conditions-on-static-page>

@@ -1,34 +1,21 @@
 <?php
 /**
- * @var $block \Magento\CheckoutAgreements\Block\Agreements
+ * @var $block \Magento\Framework\View\Element\Template
  */
 ?>
-<?php $helper = $this->helper('PeterBrain\TermsConditions\Helper\TermsConditionsHelper'); ?>
-
-<?php if ($helper->isEnabled()): ?>
-
-  <?php
-  if (!$block->getAgreements()) {
-    return;
-  } else {
-    $agreements = $block->getAgreements();
-
-    if (count($agreements) < 1) {
-      echo __("There are no terms and conditions configured yet.");
-      return;
-    }
-  }
-  ?>
-  <ol class="agreements items">
-    <?php foreach ($agreements as $agreement): ?>
-      <li class="item">
-        <?php if ($agreement->getIsHtml()): ?>
-          <?php /* @escapeNotVerified */ echo $agreement->getContent(); ?>
-        <?php else: ?>
-          <?php echo nl2br($block->escapeHtml($agreement->getContent())); ?>
-        <?php endif; ?>
-      </li>
-    <?php endforeach; ?>
-  </ol>
-
+<?php $agreements = $block->getData('agreements'); ?>
+<?php if ($agreements && count($agreements) > 0): ?>
+    <ol class="agreements items">
+        <?php foreach ($agreements as $agreement): ?>
+            <li class="item">
+                <?php if ($agreement->getIsHtml()): ?>
+                    <?= /* @noEscape */ $agreement->getContent(); ?>
+                <?php else: ?>
+                    <?= $block->escapeHtml(nl2br($agreement->getContent()), ['br']); ?>
+                <?php endif; ?>
+            </li>
+        <?php endforeach; ?>
+    </ol>
+<?php else: ?>
+    <p><?= /* @noEscape */ __("There are no terms and conditions configured yet."); ?></p>
 <?php endif; ?>

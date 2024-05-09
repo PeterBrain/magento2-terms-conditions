@@ -3,7 +3,7 @@
     <body>
         <referenceBlock name="page.main.title" remove="true"/>
         <referenceContainer name="content">
-            <block class="Magento\CheckoutAgreements\Block\Agreements" name="terms_conditions" template="PeterBrain_TermsConditions::index/termsconditions.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="terms_conditions" template="PeterBrain_TermsConditions::index/termsconditions.phtml"/>
         </referenceContainer>
     </body>
 </page>

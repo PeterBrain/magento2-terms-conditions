@@ -83,6 +83,11 @@
                     <frontend_model>PeterBrain\Core\Block\Adminhtml\System\Config\Module\SetupVersion</frontend_model>
                     <attribute type="module_name">PeterBrain_TermsConditions</attribute>
                 </field>
+                <field id="module_status" translate="label" type="note" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Status</label>
+                    <frontend_model>PeterBrain\TermsConditions\Block\Adminhtml\System\Config\Module\Status</frontend_model>
+                    <attribute type="module_name">PeterBrain_TermsConditions</attribute>
+                </field>
             </group>
         </section>
     </system>

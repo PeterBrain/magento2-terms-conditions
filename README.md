@@ -7,7 +7,7 @@ Package name: `peterbrain/magento2-terms-conditions`
   - [Installation](#installation)
     - [Method 1: Composer (recommended)](#method-1-composer-recommended)
     - [Method 2: Zip file (not recommended)](#method-2-zip-file-not-recommended)
-    - [Enable & deploy](#enable--deploy)
+    - [Enable \& deploy](#enable--deploy)
   - [Usage](#usage)
   - [Credits](#credits)
 
@@ -40,7 +40,7 @@ composer require peterbrain/magento2-terms-conditions
 
 - Unzip the zip file in `app/code/PeterBrain`
 
-This extension is dependent on [PeterBrain Core](https://github.com/PeterBrain/magento2-peterbrain-core). Make sure that you have installed it first.
+This extension requires [PeterBrain Core](https://github.com/PeterBrain/magento2-peterbrain-core). Ensure that you have it installed prior to installing this module. Use Composer to install it automatically with this module.
 
 ### Enable & deploy
 

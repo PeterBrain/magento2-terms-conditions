@@ -1,17 +1,17 @@
 <?php
 namespace PeterBrain\TermsConditions\Model\ItemProvider;
 
-use Magento\Sitemap\Model\ItemProvider\ConfigReaderInterface;;
+use Magento\Sitemap\Model\ItemProvider\ConfigReaderInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;
 use PeterBrain\TermsConditions\Helper\TermsConditionsHelper;
 
 /**
  * Class TermsConditionsConfigReader
+ * terms-conditions configuration reader
  *
  * @author PeterBrain <peter.loecker@live.at>
  * @copyright Copyright (c) PeterBrain (https://peterbrain.com/)
- * @package PeterBrain\TermsConditions\Model\ItemProvider
  */
 class TermsConditionsConfigReader implements ConfigReaderInterface
 {

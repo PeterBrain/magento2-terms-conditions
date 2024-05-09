@@ -6,10 +6,10 @@ use Magento\Store\Model\ScopeInterface;
 
 /**
  * Class TermsConditionsHelper
+ * terms-conditions helper
  *
  * @author PeterBrain <peter.loecker@live.at>
  * @copyright Copyright (c) PeterBrain (https://peterbrain.com/)
- * @package PeterBrain\TermsConditions\Helper
  */
 class TermsConditionsHelper extends AbstractHelper
 {
@@ -57,6 +57,8 @@ class TermsConditionsHelper extends AbstractHelper
     }
 
     /**
+     * Module output configuration
+     *
      * @param null $storeId
      *
      * @return string

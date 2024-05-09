@@ -29,8 +29,17 @@
 "Change frequency indicates how often the terms and conditions page is updated.","Change frequency indicates how often the terms and conditions page is updated.", module, PeterBrain_TermsConditions
 
 
-"Displays the terms and conditions text for a specific agreement ID.","Displays the terms and conditions text for a specific agreement ID.", module, PeterBrain_TermsConditions
+"Module Status","Module Status", module, PeterBrain_TermsConditions
+"Ready for operation","Ready for operation", module, PeterBrain_TermsConditions
+"Module output is disabled","Module output is disabled", module, PeterBrain_TermsConditions
+"Sales > Checkout > Checkout Options > Enable Terms and Conditions","Sales > Checkout > Checkout Options > Enable Terms and Conditions", module, PeterBrain_TermsConditions
+"Attention - Terms and conditions are disabled.","Attention - Terms and conditions are disabled.", module, PeterBrain_TermsConditions
+"Check %1","Check %1", module, PeterBrain_TermsConditions
+
+
+"Displays the terms and conditions text for one specific agreement ID.","Displays the terms and conditions text for one specific agreement ID.", module, PeterBrain_TermsConditions
 "Agreement ID","Agreement ID", module, PeterBrain_TermsConditions
+"Provide one agreement id as a number","Provide one agreement id as a number", module, PeterBrain_TermsConditions
 "Sorry, but we are unable find any terms and conditions with this id.","Sorry, but we are unable find any terms and conditions with this id.", module, PeterBrain_TermsConditions
 
 

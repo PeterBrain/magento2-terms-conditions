@@ -31,8 +31,16 @@
 "Change frequency indicates how often the terms and conditions page is updated.","Die Änderungshäufigkeit gibt an, wie oft die Seite mit den Allgemeinen Geschäftsbedingungen aktualisiert wird.", module, PeterBrain_TermsConditions
 
 
-"Displays the terms and conditions text for a specific agreement ID.","Zeigt den Text der Allgemeinen Geschäftsbedingungen für eine bestimmte Vertrags-ID an.", module, PeterBrain_TermsConditions
+"Module Status","Modulstatus", module, PeterBrain_TermsConditions
+"Ready for operation","Bereit zum Einsatz", module, PeterBrain_TermsConditions
+"Module output is disabled","Modulausgabe ist deaktiviert", module, PeterBrain_TermsConditions
+"Sales > Checkout > Checkout Options > Enable Terms and Conditions","Sales > Checkout > Checkout Options > Enable Terms and Conditions", module, PeterBrain_TermsConditions
+"Attention - Terms and conditions are disabled.","Achtung - Allgemeine Geschäftsbedingungen sind deaktiviert.", module, PeterBrain_TermsConditions
+"Check %1","Überprüfe %1", module, PeterBrain_TermsConditions
+
+"Displays the terms and conditions text for one specific agreement ID.","Zeigt den Text der Allgemeinen Geschäftsbedingungen für eine bestimmte Vertrags-ID an.", module, PeterBrain_TermsConditions
 "Agreement ID","Agreement ID", module, PeterBrain_TermsConditions
+"Provide one agreement id as a number","Geben Sie eine ID als Nummer an", module, PeterBrain_TermsConditions
 "Sorry, but we are unable find any terms and conditions with this id.","Es tut uns leid, aber wir können keine Geschäftsbedingungen zu dieser ID finden.", module, PeterBrain_TermsConditions
 
 

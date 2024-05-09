@@ -5,36 +5,50 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\View\Result\PageFactory;
 use PeterBrain\TermsConditions\Helper\TermsConditionsHelper;
+use Magento\CheckoutAgreements\Block\Agreements as AgreementsBlock;
 
 /**
  * Class Index
+ * terms-conditions controller
  *
  * @author PeterBrain <peter.loecker@live.at>
  * @copyright Copyright (c) PeterBrain (https://peterbrain.com/)
- * @package PeterBrain\TermsConditions\Controller\Index
  */
 class Index extends Action
 {
     /**
      * @var PageFactory
      */
-    protected $resultPageFactory;
+    protected $_resultPageFactory;
+
+    /**
+     * @var AgreementsBlock
+     */
+    protected $_agreementsBlock;
+
+    /**
+     * @var TermsConditionsHelper
+     */
+    protected $_termsConditionsHelper;
 
     /**
      * Constructor
      *
      * @param Context $context
      * @param PageFactory $resultPageFactory
+     * @param AgreementsBlock $agreementsBlock
      * @param TermsConditionsHelper $termsConditionsHelper
      */
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory,
+        AgreementsBlock $agreementsBlock,
         TermsConditionsHelper $termsConditionsHelper
     ) {
-        $this->resultPageFactory = $resultPageFactory;
-        $this->_termsConditionsHelper = $termsConditionsHelper;
         parent::__construct($context);
+        $this->_resultPageFactory = $resultPageFactory;
+        $this->_agreementsBlock = $agreementsBlock;
+        $this->_termsConditionsHelper = $termsConditionsHelper;
     }
 
     /**
@@ -44,8 +58,17 @@ class Index extends Action
      */
     public function execute()
     {
-        $this->resultPage = $this->resultPageFactory->create();
-		$this->resultPage->getConfig()->getTitle()->set($this->_termsConditionsHelper->getPageTitle());
-        return $this->resultPage;
+        if (!$this->_termsConditionsHelper->isEnabled()) {
+            $this->_forward('noroute');
+            return;
+        }
+
+        $resultPage = $this->_resultPageFactory->create();
+        $resultPage->getConfig()->getTitle()->set($this->_termsConditionsHelper->getPageTitle());
+
+        $agreements = $this->_agreementsBlock->getAgreements();
+        $resultPage->getLayout()->getBlock('terms_conditions')->setData('agreements', $agreements);
+
+        return $resultPage;
     }
 }

@@ -10,10 +10,10 @@ use PeterBrain\TermsConditions\Model\ItemProvider\TermsConditionsConfigReader;
 
 /**
  * Class TermsConditions
+ * terms-conditions item provider
  *
  * @author PeterBrain <peter.loecker@live.at>
  * @copyright Copyright (c) PeterBrain (https://peterbrain.com/)
- * @package PeterBrain\TermsConditions\Model\ItemProvider
  */
 class TermsConditions implements ItemProviderInterface
 {
@@ -72,6 +72,9 @@ class TermsConditions implements ItemProviderInterface
     public function getItems($storeId): array
     {
         /*$this->_logger->debug($this->getAddToSitemap($storeId));*/
+        if (!$this->_termsConditionsHelper->isEnabled()) {
+            return [];
+        }
 
         if ($this->_termsConditionsHelper->isEnabled() && $this->getAddToSitemap($storeId)) {
             $this->sitemapItems[] = $this->_itemFactory->create(
